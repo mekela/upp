@@ -14,6 +14,9 @@
      background: #0089a9;
    }
  }
+.menu_trigger{
+  display: none;
+}
   .menu{
     overflow: hidden;
     ul{
@@ -566,12 +569,16 @@
     &__numb{
       margin:0 auto;
       position: relative;
-      left:20px;
+      //left:20px;
       width:205px;
       height:205px;
       background-position: 0 0;
       background-repeat: no-repeat;
-      display: table-cell;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
       vertical-align: middle;
       text-align: center;
       font-size:85px;
@@ -760,7 +767,8 @@
     color: #feffff;
     font-size:18px;
     overflow: hidden;
-    background: url(../img/contact_bg.jpg) no-repeat center;
+    background: url(../img/contact_bg.jpg) no-repeat center top;
+    height:650px;
     .container{
       padding-top:70px;
       height:660px;
@@ -788,11 +796,12 @@
     &__right{
       float: right;
       width:550px;
+      height:530px;
       background: rgba(255,255,255, 0.15);
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      padding:33px;
+      padding:25px 30px;
       font-size:18px;
       strong{
         font-weight:500;
@@ -824,7 +833,7 @@
     }
     .bx-pager{
       text-align: center;
-      margin-top:30px;
+      margin-top:-20px;
       .bx-pager-item{
         display: inline-block;
         margin:0 3px;
@@ -844,10 +853,12 @@
     }
     &__txt{
       padding-bottom:25px;
+      font-weight:300;
       p  a{
         color: #dcdcdc;
         position: relative;
         padding:0 15px 0 0;
+
         &:after{
           content:'';
           @include arr(8,10, #dcdcdc, r);
@@ -865,6 +876,161 @@
  
  .footer{
 	@include povh('');
+   background: #262626;
+   color: #feffff;
+   font-size:14px;
+   h6{
+     font-size:18px;
+     text-transform: uppercase;
+     padding:15px 0;
+     margin:0;
+     font-family:$fontfamily;
+     font-weight:300;
+   }
+   .button{
+     color: #262626;
+     text-shadow: none;
+     font-size:10px;
+     background: #fff;
+   }
+   &__top{
+     display: flex;
+     padding:45px 0  35px 0;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     & > div{
+       width:30%;
+     }
+   }
+   &__logo{
+     display: block;
+     margin-bottom:15px;
+     color: #feffff;
+     font-size:14px;
+   }
+   &__left{
+     p{
+       margin:0;
+       padding:0 0 15px 0;
+     }
+   }
+   &__center{
+     small{
+       display: block;
+       text-align: right;
+       font-size:9px;
+       color: #a8a8a8;
+       font-style: italic;
+       padding-bottom:5px;
+     }
+   }
+   &__form-item{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     div{
+       width:48%;
+       padding-bottom:18px;
+     }
+     input:not(.button), select, textarea{
+       color: #fff;
+       background: none;
+       border: none;
+       -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+       border-radius: 0;
+       border-bottom:1px solid #fff;
+       width:100%;
+       height:20px;
+       padding:0;
+       font-size:11px;
+       font-weight:300;
+       margin:0;
+       &:focus{
+         -webkit-box-shadow: none;
+         -moz-box-shadow: none;
+         box-shadow: none;
+       }
+     }
+     select{
+       text-indent:0px;
+     }
+     textarea{
+       margin-top:40px;
+       margin-bottom:10px;
+     }
+     option{
+       color: #000;
+     }
+   }
+   &__right{
+     font-size:12px;
+     ul{
+       padding: 0 0 15px 15px;
+       margin:0;
+     }
+     nav{
+       padding-top:30px;
+       a{
+         text-transform: uppercase;
+         font-size:18px;
+         text-decoration: none;
+         font-weight:300;
+         display: block;
+         padding-bottom:11px;
+         font-family:$fontfamily;
+         &:hover{
+           text-decoration: underline;
+         }
+       }
+     }
+   }
+  &__bottom{
+    background: #fff;
+    font-size:11px;
+    text-transform: uppercase;
+    font-weight:300;
+    text-align: center;
+    color: #333333;
+    font-style: normal;
+
+    address{
+      padding:10px 0;
+      display: block;
+      font-style: normal;
+    }
+  }
  }
+ .totop{
+   position: absolute;
+   width:110px;
+   height:21px;
+   bottom:0;
+   right:0;
+   background: #0089a9;
+   text-align: center;
+   color: #fff;
+   text-decoration: none;
+   line-height:21px;
+   text-transform: uppercase;
+   font-weight:300;
+   font-size:14px;
+   font-family:$fontfamily;
+   span{
+     position: relative;
+     padding:0 15px 0 0;
+     display: inline-block;
+     &:before{
+       content:'';
+       position: absolute;
+       right:0;
+       top:7px;
+       @include arr(6,6, #fff, t)
+     }
+   }
+ }
+
+
+ 
 
 /*----------end footer----------*/
