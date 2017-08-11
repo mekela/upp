@@ -18,6 +18,16 @@
     width:100%;
     float: none;
   }
+  .avantages__block{
+    display: none;
+  }
+  .avantages__mobile{
+    display: block;
+    padding-bottom:20px;
+    img{
+      max-width:100%;
+    }
+  }
 }
 
 @include mq($max-width: 930px) {
@@ -80,6 +90,29 @@
   }
   img{
     max-width: 100%;
+  }
+  .main-title{
+    color: #0089a9;
+    text-align: center;
+    padding:0;
+    h2{
+      padding:0;
+      margin:0;
+    }
+  }
+  .actualities .alignright{
+    float: none !important;
+    margin:0 auto;
+    max-width: 100%;
+    padding:0;
+    padding-bottom:30px;
+  }
+  .actualities__block:before, .actualities__block:after{
+    display: none;
+  }
+  .actualities__block{
+    text-align: center;
+    padding-left:0;
   }
 }
 

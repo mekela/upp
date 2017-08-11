@@ -3,7 +3,7 @@
  /*----------header----------*/
 
  .header{
-	@include povh('');
+	//@include povh('');
    position: fixed;
    left:0;
    top:0;
@@ -12,6 +12,7 @@
    .container{
      height:40px;
      background: #0089a9;
+     overflow: visible;
    }
  }
 .menu_trigger{
@@ -37,11 +38,12 @@
           &:hover{
             text-decoration: underline;
           }
-        }
-        &.active{
-          a{
-            text-decoration: underline;
-            font-weight: 500;
+
+          &.active{
+
+              text-decoration: underline;
+              font-weight: 500;
+
           }
         }
       }
@@ -73,6 +75,33 @@
         right:17px;
       }
     }
+    &__list{
+      position: absolute;
+      display: none;
+      top:40px;
+      right:0;
+      width:100px;
+      background: #49abc2;
+      border-top:1px solid #fff;
+      padding:0;
+      margin:0;
+      list-style: none;
+      text-align: center;
+      li{
+        padding:5px 0;
+        color: #fff;
+        font-size:14px;
+        text-transform: uppercase;
+        font-family:$fontfamily;
+        line-height:40px;
+        a{
+          text-decoration: none;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
 
 
@@ -87,7 +116,8 @@
  }
   .logo-slogan{
     text-align: right;
-    height:860px;
+    height:820px;
+    padding-top:40px;
   }
     .slogan{
       width:595px;
@@ -126,6 +156,7 @@
     }
 
   .solution{
+    padding-top:40px;
     color: #333333;
     font-size:18px;
     overflow: visible;
@@ -137,7 +168,7 @@
       background: #0189a9;
       position: absolute;
       left:-100px;
-      top:30px;
+      top:70px;
     }
     p{
       padding:0;
@@ -208,7 +239,7 @@
   }
   
   .top-slider{
-    margin-bottom:100px;
+    margin-bottom:60px;
     height:470px;
     background: url("../img/slider.jpg") no-repeat top center;
    // background-size:cover;
@@ -280,6 +311,7 @@
   
   .avantages{
     overflow: visible;
+    padding-top:40px;
     &__block{
       background: url(../img/tablette.png) no-repeat center;
       height:820px;
@@ -1034,3 +1066,87 @@
  
 
 /*----------end footer----------*/
+
+.avantages__mobile{
+  display: none;
+}
+.main-title{
+  font-size:60px;
+  color: #ffffff;
+  padding:55px 136px 0 0;
+  text-align: right;
+  h2{
+    font-size:60px;
+    font-family:$fontfamily;
+    font-weight:300;
+    a{
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+  .actualities{
+    &.container{
+      overflow: visible;
+    }
+    position: relative;
+    padding:115px 0 0 0;
+    &__block{
+      overflow: hidden;
+      padding-bottom:50px;
+      padding-left:40px;
+      margin-bottom:50px;
+      position: relative;
+      &:before{
+        content:'';
+        position: absolute;
+        left: 19px;
+        top: 18px;
+        width:13px;
+        height:13px;
+        border-radius:50%;
+        background: #0189a9;
+      }
+      &:after{
+        width: 70px;
+        content: '';
+        height: 1px;
+        background: #0189a9;
+        position: absolute;
+        left: -47px;
+        top: 23px;
+      }
+    }
+    .alignright{
+      padding:20px 0 0 50px;
+    }
+    article{
+      overflow: hidden;
+      font-size:18px;
+      font-weight:300;
+      position: relative;
+    }
+    h6{
+      font-size:36px;
+      color: #0089a9;
+      font-weight:500;
+      font-family:$fontfamily;
+      padding:0;
+      margin:0;
+    }
+    em{
+      font-size:14px;
+      color: #8f8f8f;
+      font-style: italic;
+      font-weight:300;
+    }
+    p{
+      margin:0;
+      padding: 15px 0 0 0;
+    }
+    .button{
+      margin-top:20px;
+    }
+  }
